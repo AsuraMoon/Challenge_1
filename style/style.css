@@ -1,0 +1,251 @@
+:root{
+    --mainColor:#add980;
+}
+
+html, body{
+    padding:0;
+    margin:0;
+    height:100%;
+    font-family:Montserrat;
+}
+
+body{
+    max-width:1920px;
+    margin:auto;
+}
+
+header{
+    background-image:url("../images/bg.jpg");
+    display:flex;
+    height:850px;
+    padding-top:30px;
+    max-height:90%;
+    background-attachment: fixed;
+    background-position:top center;
+    background-size:stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    color:white;
+}
+
+header img{
+    float:left;
+}
+
+header nav{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    align-items: center;
+    font-weight:bold;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+header a{
+    color:white;    
+}
+
+a:hover{
+    text-shadow: 1px 1px 1px black;
+}
+
+#logo{
+    width:200px;
+}
+
+header h1{
+    margin-left:10%;
+    max-width:650px;
+    font-size:5.5em;
+    line-height:0.9em; 
+}
+
+h1, h2{
+    font-family:"Abril Fatface";
+}
+
+header em{
+    font-style:normal;
+    margin-left:5%;
+}
+
+main, footer{
+    max-width:1268px;
+    margin:auto;
+}
+
+footer{
+    display:flex;
+    justify-content: space-between;
+}
+
+#bandeau svg{
+    color:var(--mainColor);
+    height:100px;
+    width:100px;
+}
+
+#bandeau p{
+    font-weight:500;
+}
+
+#bandeau{
+    text-align:center;
+    display:flex;
+    justify-content: space-between;
+}
+
+#meilleuresVentes{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    
+}
+
+h2{
+    width:100%;
+    font-size:3em;
+}
+
+h2::first-letter{
+    text-decoration: underline;
+    text-decoration-color: var(--mainColor);
+    text-decoration-thickness: 10px;
+}
+
+#meilleuresVentes article{
+    width:317px;
+    height:475px;    
+}
+
+article{
+    background-size: cover;
+    background-position:center center;
+    display:flex;
+}
+
+#vente1{
+    background-image:url("../images/nos_meilleures_ventes/1.jpg");
+}
+
+#vente2{
+    background-image:url("../images/nos_meilleures_ventes/2.jpg");
+}
+
+#vente3{
+    background-image:url("../images/nos_meilleures_ventes/3.jpg");
+}
+
+#vente4{
+    background-image:url("../images/nos_meilleures_ventes/4.jpg");
+}
+
+.tag{
+    background-color:#FFFFFFDF;
+    align-self: flex-end;
+    width:100%;
+    height:50px;
+    font-weight:500;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    padding:10px;
+}
+
+.type{
+    grid-column:1/2;
+    grid-row: 1/2;
+}
+
+.prix{
+    grid-column:1/2;
+    grid-row: 2/3;
+    color:var(--mainColor);
+    font-weight:600;
+    font-size:0.8em;
+}
+
+.more{
+    grid-column: 2/3;
+    grid-row:1/3;
+    background-color:var(--mainColor);
+    height:40px;
+    border-radius:20px;
+    border:none;
+    box-shadow:2px 2px 5px gray;
+    color:white;
+    font-weight:600;
+}
+
+.more:hover{
+    box-shadow:2px 2px 5px black;
+}
+
+#nosPlantes{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 450px 450px 675px;
+    grid-template-areas:    'plante1 plante1 plante2 plante2'
+                            'plante1 plante1 plante3 plante3'
+                            'plante4 plante5 plante5 plante6';
+}
+
+#nosPlantes article{
+    margin:10px;
+}
+
+#plante1{
+    grid-area:plante1;
+    background-image:url("../images/nos_plantes/1.jpg");
+}
+
+#plante2{
+    grid-area:plante2;
+    background-image:url("../images/nos_plantes/2.jpg");
+}
+
+#plante3{
+    grid-area:plante3;
+    background-image:url("../images/nos_plantes/3.jpg");
+}
+
+#plante4{
+    grid-area:plante4;
+    background-image:url("../images/nos_plantes/4.jpg");
+}
+
+#plante5{
+    grid-area:plante5;
+    background-image:url("../images/nos_plantes/5.jpg");
+}
+
+#plante6{
+    grid-area:plante6;
+    background-image:url("../images/nos_plantes/6.jpg");
+}
+
+@media(max-width:767px){
+    header h1{
+        font-size:4em;
+    }
+    #nosPlantes{
+        grid-template-columns: 1fr;
+        grid-template-rows: 450px 225px 225px 675px 675px 675px;
+        grid-template-areas:    'plante1'
+                                'plante2'
+                                'plante3'
+                                'plante4'
+                                'plante5'
+                                'plante6';
+    }
+    header nav a{
+        display:block;
+        width:100%;
+        text-align:center;
+        line-height:2em;
+    }
+}
